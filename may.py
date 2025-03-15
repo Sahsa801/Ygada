@@ -1,4 +1,6 @@
-for i in range(1, 21):
-    if i % 3 == 0:
-        continue
-    print(i)
+def to_secret_code(text):
+    return "".join("0" if char.lower() in "aeiou" else "1" if char.isalpha() else char for char in text)
+
+# Приклад використання
+text = "Hello, world!"
+print(to_secret_code(text))
