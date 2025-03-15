@@ -1,6 +1,8 @@
-def to_secret_code(text):
-    return "".join("0" if char.lower() in "aeiou" else "1" if char.isalpha() else char for char in text)
+max_number = float(input("Введіть число 1: "))
 
-# Приклад використання
-text = "Hello, world!"
-print(to_secret_code(text))
+for i in range(9):
+    num = float(input(f"Введіть число {i+2}: "))
+    if num > max_number:
+        max_number = num
+
+print(f"Найбільше введене число: {max_number}")
